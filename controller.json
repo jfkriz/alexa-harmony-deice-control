@@ -1,0 +1,1214 @@
+Connected to the hub
+{
+  "dataConsent": false,
+  "sequence": [],
+  "global": {
+    "timeStampHash": "302bb8c0-9104-4342-a0c9-727320ae93ced114397f-cd73-4ff2-80a1-8be2a4de263a/08fb9b8b-8179-4762-80ac-512f401e9f502c4a77c8-6363-4b23-ac56-174e9fb7a4de9af1ee15-c781-4a0a-be94-a3417e4da11a16313807Harmony+Hub+Lukasen-USjim@kriz.netUSMS-d92f38d2-5733-4de9-ac41-f04e807adbd301027637988False2143824050america%2fnew_yorkTrue13624365461;63b9291c280b6088bf227681ac2e079a",
+    "locale": "en-US"
+  },
+  "device": [
+    {
+      "label": "Rxment LED Controller",
+      "deviceAddedDate": "/Date(1589756893863+0000)/",
+      "ControlPort": 7,
+      "contentProfileKey": 69617402,
+      "deviceProfileUri": "svcs.myharmony.com/res/device/69617402-d8sd9z9VdYbE5VeJD+L8Kzzi1hH2R3xM617nsfvLQzE=",
+      "manufacturer": "Rxment",
+      "icon": "24",
+      "Capabilities": [
+        501
+      ],
+      "deviceTypeDisplayName": "LightController",
+      "powerFeatures": {
+        "PowerOffActions": [],
+        "PowerOnActions": []
+      },
+      "isManualPower": "false",
+      "controlGroup": [
+        {
+          "name": "Home",
+          "function": [
+            {
+              "action": "{\"command\":\"PowerToggle\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "PowerToggle",
+              "label": "Power Toggle"
+            },
+            {
+              "action": "{\"command\":\"Brightness Up\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "BrightnessUp",
+              "label": "Up"
+            },
+            {
+              "action": "{\"command\":\"Brightness Down\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "BrightnessDown",
+              "label": "Down"
+            }
+          ]
+        },
+        {
+          "name": "Miscellaneous",
+          "function": [
+            {
+              "action": "{\"command\":\"1 Hour\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "1 Hour",
+              "label": "1 Hour"
+            },
+            {
+              "action": "{\"command\":\"100%\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "100%",
+              "label": "100%"
+            },
+            {
+              "action": "{\"command\":\"2 Hour\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "2 Hour",
+              "label": "2 Hour"
+            },
+            {
+              "action": "{\"command\":\"4 Hour\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "4 Hour",
+              "label": "4 Hour"
+            },
+            {
+              "action": "{\"command\":\"50%\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "50%",
+              "label": "50%"
+            },
+            {
+              "action": "{\"command\":\"75%\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "75%",
+              "label": "75%"
+            },
+            {
+              "action": "{\"command\":\"8 Hour\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "8 Hour",
+              "label": "8 Hour"
+            },
+            {
+              "action": "{\"command\":\"Amber\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Amber",
+              "label": "Amber"
+            },
+            {
+              "action": "{\"command\":\"Auto\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Auto",
+              "label": "Auto"
+            },
+            {
+              "action": "{\"command\":\"Blue\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Blue",
+              "label": "Blue"
+            },
+            {
+              "action": "{\"command\":\"Fade 3\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Fade 3",
+              "label": "Fade 3"
+            },
+            {
+              "action": "{\"command\":\"Fade 7\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Fade 7",
+              "label": "Fade 7"
+            },
+            {
+              "action": "{\"command\":\"Flash\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Flash",
+              "label": "Flash"
+            },
+            {
+              "action": "{\"command\":\"Green\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Green",
+              "label": "Green"
+            },
+            {
+              "action": "{\"command\":\"Jump 3\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Jump 3",
+              "label": "Jump 3"
+            },
+            {
+              "action": "{\"command\":\"Jump 7\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Jump 7",
+              "label": "Jump 7"
+            },
+            {
+              "action": "{\"command\":\"Music 1\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Music 1",
+              "label": "Music 1"
+            },
+            {
+              "action": "{\"command\":\"Music 2\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Music 2",
+              "label": "Music 2"
+            },
+            {
+              "action": "{\"command\":\"Music 3\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Music 3",
+              "label": "Music 3"
+            },
+            {
+              "action": "{\"command\":\"Music 4\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Music 4",
+              "label": "Music 4"
+            },
+            {
+              "action": "{\"command\":\"Play\\/Pause\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Play/Pause",
+              "label": "Play/Pause"
+            },
+            {
+              "action": "{\"command\":\"Quick\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Quick",
+              "label": "Quick"
+            },
+            {
+              "action": "{\"command\":\"Red\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Red",
+              "label": "Red"
+            },
+            {
+              "action": "{\"command\":\"Slow\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Slow",
+              "label": "Slow"
+            },
+            {
+              "action": "{\"command\":\"Sunrise\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Sunrise",
+              "label": "Sunrise"
+            },
+            {
+              "action": "{\"command\":\"Sunset\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Sunset",
+              "label": "Sunset"
+            },
+            {
+              "action": "{\"command\":\"White\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "White",
+              "label": "White"
+            }
+          ]
+        }
+      ],
+      "model": "LED Controller",
+      "IsKeyboardAssociated": false,
+      "DongleRFID": 0,
+      "id": "69617402",
+      "type": "LightController",
+      "suggestedDisplay": "DEFAULT",
+      "Transport": 1
+    },
+    {
+      "label": "Onkyo Stereo",
+      "deviceAddedDate": "/Date(1589748837083+0000)/",
+      "ControlPort": 7,
+      "contentProfileKey": 69615105,
+      "deviceProfileUri": "svcs.myharmony.com/res/device/69615105-W2U6TyuwJar5PwQy9edFAnzhpppDMgb5nqJxfCrZ0nc=",
+      "manufacturer": "Onkyo",
+      "icon": "21",
+      "Capabilities": [
+        1,
+        5,
+        8
+      ],
+      "deviceTypeDisplayName": "MiniSystemCDRadioCassette",
+      "powerFeatures": {
+        "PowerOffActions": [],
+        "PowerOnActions": []
+      },
+      "isManualPower": "false",
+      "controlGroup": [
+        {
+          "name": "Power",
+          "function": [
+            {
+              "action": "{\"command\":\"PowerToggle\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "PowerToggle",
+              "label": "Power Toggle"
+            }
+          ]
+        },
+        {
+          "name": "NumericBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"0\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number0",
+              "label": "0"
+            },
+            {
+              "action": "{\"command\":\"1\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number1",
+              "label": "1"
+            },
+            {
+              "action": "{\"command\":\"2\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number2",
+              "label": "2"
+            },
+            {
+              "action": "{\"command\":\"3\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number3",
+              "label": "3"
+            },
+            {
+              "action": "{\"command\":\"4\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number4",
+              "label": "4"
+            },
+            {
+              "action": "{\"command\":\"5\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number5",
+              "label": "5"
+            },
+            {
+              "action": "{\"command\":\"6\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number6",
+              "label": "6"
+            },
+            {
+              "action": "{\"command\":\"7\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number7",
+              "label": "7"
+            },
+            {
+              "action": "{\"command\":\"8\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number8",
+              "label": "8"
+            },
+            {
+              "action": "{\"command\":\"9\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number9",
+              "label": "9"
+            },
+            {
+              "action": "{\"command\":\"Clear\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Clear",
+              "label": "Clear"
+            }
+          ]
+        },
+        {
+          "name": "Volume",
+          "function": [
+            {
+              "action": "{\"command\":\"Mute\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Mute",
+              "label": "Mute"
+            },
+            {
+              "action": "{\"command\":\"VolumeDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "VolumeDown",
+              "label": "Volume Down"
+            },
+            {
+              "action": "{\"command\":\"VolumeUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "VolumeUp",
+              "label": "Volume Up"
+            }
+          ]
+        },
+        {
+          "name": "NavigationBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"DirectionDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionDown",
+              "label": "Direction Down"
+            },
+            {
+              "action": "{\"command\":\"DirectionLeft\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionLeft",
+              "label": "Direction Left"
+            },
+            {
+              "action": "{\"command\":\"DirectionRight\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionRight",
+              "label": "Direction Right"
+            },
+            {
+              "action": "{\"command\":\"DirectionUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionUp",
+              "label": "Direction Up"
+            },
+            {
+              "action": "{\"command\":\"Enter\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Select",
+              "label": "Select"
+            }
+          ]
+        },
+        {
+          "name": "TransportBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"Stop\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Stop",
+              "label": "Stop"
+            },
+            {
+              "action": "{\"command\":\"Play\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Play",
+              "label": "Play"
+            },
+            {
+              "action": "{\"command\":\"Rewind\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Rewind",
+              "label": "Rewind"
+            },
+            {
+              "action": "{\"command\":\"Eject\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Eject",
+              "label": "Eject"
+            },
+            {
+              "action": "{\"command\":\"Pause\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Pause",
+              "label": "Pause"
+            },
+            {
+              "action": "{\"command\":\"FastForward\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "FastForward",
+              "label": "Fast Forward"
+            }
+          ]
+        },
+        {
+          "name": "TransportExtended",
+          "function": [
+            {
+              "action": "{\"command\":\"PreviousTrack\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SkipBackward",
+              "label": "Skip Backward"
+            },
+            {
+              "action": "{\"command\":\"NextTrack\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SkipForward",
+              "label": "Skip Forward"
+            }
+          ]
+        },
+        {
+          "name": "NavigationDVD",
+          "function": [
+            {
+              "action": "{\"command\":\"Return\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Return",
+              "label": "Return"
+            },
+            {
+              "action": "{\"command\":\"Menu\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Menu",
+              "label": "Menu"
+            }
+          ]
+        },
+        {
+          "name": "PlayMode",
+          "function": [
+            {
+              "action": "{\"command\":\"Shuffle\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Shuffle",
+              "label": "Shuffle"
+            }
+          ]
+        },
+        {
+          "name": "RadioTuner",
+          "function": [
+            {
+              "action": "{\"command\":\"PresetPrev\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "PrevPreset",
+              "label": "Prev Preset"
+            },
+            {
+              "action": "{\"command\":\"TuneDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "ScanDown",
+              "label": "Scan Down"
+            },
+            {
+              "action": "{\"command\":\"TuneUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "ScanUp",
+              "label": "Scan Up"
+            },
+            {
+              "action": "{\"command\":\"PresetNext\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "NextPreset",
+              "label": "Next Preset"
+            },
+            {
+              "action": "{\"command\":\"DirectTune\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectTune",
+              "label": "Direct Tune"
+            }
+          ]
+        },
+        {
+          "name": "Setup",
+          "function": [
+            {
+              "action": "{\"command\":\"Sleep\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Sleep",
+              "label": "Sleep"
+            }
+          ]
+        },
+        {
+          "name": "NavigationMusic",
+          "function": [
+            {
+              "action": "{\"command\":\"NowPlaying\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "NowPlaying",
+              "label": "NowPlaying"
+            }
+          ]
+        },
+        {
+          "name": "NavigationExtended",
+          "function": [
+            {
+              "action": "{\"command\":\"Info\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Info",
+              "label": "Info"
+            }
+          ]
+        },
+        {
+          "name": "Miscellaneous",
+          "function": [
+            {
+              "action": "{\"command\":\"Bluetooth\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Bluetooth",
+              "label": "Bluetooth"
+            },
+            {
+              "action": "{\"command\":\"Dimmer\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Dimmer",
+              "label": "Dimmer"
+            },
+            {
+              "action": "{\"command\":\"InputNext\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "InputNext",
+              "label": "InputNext"
+            },
+            {
+              "action": "{\"command\":\"InputPrevious\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "InputPrevious",
+              "label": "InputPrevious"
+            },
+            {
+              "action": "{\"command\":\"Memory\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Memory",
+              "label": "Memory"
+            },
+            {
+              "action": "{\"command\":\"Tone\\/Bal\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Tone/Bal",
+              "label": "Tone/Bal"
+            }
+          ]
+        }
+      ],
+      "model": "CR-375",
+      "IsKeyboardAssociated": false,
+      "DongleRFID": 0,
+      "id": "69615105",
+      "type": "MiniSystemCDRadioCassette",
+      "suggestedDisplay": "DEFAULT",
+      "Transport": 1
+    }
+  ],
+  "sla": {
+    "latestSLAAccepted": true,
+    "latestSLAAcceptedDate": "/Date(1589747949590+0000)/"
+  },
+  "content": {
+    "contentUserHost": "https://content.dhg.myharmony.com/1.0/User;{userProfileUri}",
+    "contentDeviceHost": "https://content.dhg.myharmony.com/1.0/Device;{deviceProfileUri}",
+    "contentServiceHost": "https://content.dhg.myharmony.com/1.0/Service/{providerId}",
+    "contentImageHost": "https://d1tk8oqnnsddt5.cloudfront.net/1.0/station/{stationId}/image;maxX=40;maxY=40",
+    "householdUserProfileUri": "svcs.myharmony.com/res//household/827108-MYyZ+hgLoWYDWaNtRphE2wUG4qAV8ZCv3AAiLfajF9Y=/user/default"
+  },
+  "activity": [
+    {
+      "rules": [],
+      "sequences": [],
+      "isTuningDefault": false,
+      "activityTypeDisplayName": "Default",
+      "enterActions": [],
+      "fixit": {
+        "69615105": {
+          "isRelativeInput": true,
+          "Power": "On",
+          "Input": "Line",
+          "id": "69615105",
+          "isRelativePower": true
+        },
+        "69617402": {
+          "id": "69617402",
+          "isRelativePower": true,
+          "Power": "Off"
+        }
+      },
+      "icon": "userdata: 0x4454c8",
+      "zones": null,
+      "suggestedDisplay": "ListenToMusic",
+      "isAVActivity": true,
+      "id": "44505840",
+      "baseImageUri": "https://rcbu-test-ssl-amr.s3.amazonaws.com/",
+      "controlGroup": [
+        {
+          "name": "NumericBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"0\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number0",
+              "label": "0"
+            },
+            {
+              "action": "{\"command\":\"1\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number1",
+              "label": "1"
+            },
+            {
+              "action": "{\"command\":\"2\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number2",
+              "label": "2"
+            },
+            {
+              "action": "{\"command\":\"3\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number3",
+              "label": "3"
+            },
+            {
+              "action": "{\"command\":\"4\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number4",
+              "label": "4"
+            },
+            {
+              "action": "{\"command\":\"5\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number5",
+              "label": "5"
+            },
+            {
+              "action": "{\"command\":\"6\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number6",
+              "label": "6"
+            },
+            {
+              "action": "{\"command\":\"7\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number7",
+              "label": "7"
+            },
+            {
+              "action": "{\"command\":\"8\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number8",
+              "label": "8"
+            },
+            {
+              "action": "{\"command\":\"9\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number9",
+              "label": "9"
+            },
+            {
+              "action": "{\"command\":\"Clear\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Clear",
+              "label": "Clear"
+            }
+          ]
+        },
+        {
+          "name": "Volume",
+          "function": [
+            {
+              "action": "{\"command\":\"Mute\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Mute",
+              "label": "Mute"
+            },
+            {
+              "action": "{\"command\":\"VolumeDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "VolumeDown",
+              "label": "Volume Down"
+            },
+            {
+              "action": "{\"command\":\"VolumeUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "VolumeUp",
+              "label": "Volume Up"
+            }
+          ]
+        },
+        {
+          "name": "NavigationBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"DirectionDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionDown",
+              "label": "Direction Down"
+            },
+            {
+              "action": "{\"command\":\"DirectionLeft\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionLeft",
+              "label": "Direction Left"
+            },
+            {
+              "action": "{\"command\":\"DirectionRight\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionRight",
+              "label": "Direction Right"
+            },
+            {
+              "action": "{\"command\":\"DirectionUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionUp",
+              "label": "Direction Up"
+            },
+            {
+              "action": "{\"command\":\"Enter\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Select",
+              "label": "Select"
+            }
+          ]
+        },
+        {
+          "name": "TransportBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"Stop\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Stop",
+              "label": "Stop"
+            },
+            {
+              "action": "{\"command\":\"Play\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Play",
+              "label": "Play"
+            },
+            {
+              "action": "{\"command\":\"Rewind\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Rewind",
+              "label": "Rewind"
+            },
+            {
+              "action": "{\"command\":\"Eject\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Eject",
+              "label": "Eject"
+            },
+            {
+              "action": "{\"command\":\"Pause\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Pause",
+              "label": "Pause"
+            },
+            {
+              "action": "{\"command\":\"FastForward\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "FastForward",
+              "label": "Fast Forward"
+            }
+          ]
+        },
+        {
+          "name": "TransportExtended",
+          "function": [
+            {
+              "action": "{\"command\":\"PreviousTrack\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SkipBackward",
+              "label": "Skip Backward"
+            },
+            {
+              "action": "{\"command\":\"NextTrack\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SkipForward",
+              "label": "Skip Forward"
+            }
+          ]
+        },
+        {
+          "name": "NavigationDVD",
+          "function": [
+            {
+              "action": "{\"command\":\"Return\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Return",
+              "label": "Return"
+            },
+            {
+              "action": "{\"command\":\"Menu\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Menu",
+              "label": "Menu"
+            }
+          ]
+        },
+        {
+          "name": "GameType3",
+          "function": [
+            {
+              "action": "{\"command\":\"Enter\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SelectGame",
+              "label": "Select"
+            }
+          ]
+        },
+        {
+          "name": "RadioTuner",
+          "function": [
+            {
+              "action": "{\"command\":\"PresetPrev\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "PrevPreset",
+              "label": "Prev Preset"
+            },
+            {
+              "action": "{\"command\":\"TuneDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "ScanDown",
+              "label": "Scan Down"
+            },
+            {
+              "action": "{\"command\":\"TuneUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "ScanUp",
+              "label": "Scan Up"
+            },
+            {
+              "action": "{\"command\":\"PresetNext\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "NextPreset",
+              "label": "Next Preset"
+            },
+            {
+              "action": "{\"command\":\"DirectTune\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectTune",
+              "label": "Direct Tune"
+            }
+          ]
+        },
+        {
+          "name": "NavigationExtended",
+          "function": [
+            {
+              "action": "{\"command\":\"Info\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Info",
+              "label": "Info"
+            }
+          ]
+        },
+        {
+          "name": "PlayMode",
+          "function": [
+            {
+              "action": "{\"command\":\"Shuffle\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Shuffle",
+              "label": "Shuffle"
+            }
+          ]
+        },
+        {
+          "name": "NavigationMusic",
+          "function": [
+            {
+              "action": "{\"command\":\"NowPlaying\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "NowPlaying",
+              "label": "NowPlaying"
+            }
+          ]
+        },
+        {
+          "name": "Setup",
+          "function": [
+            {
+              "action": "{\"command\":\"Sleep\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Sleep",
+              "label": "Sleep"
+            }
+          ]
+        }
+      ],
+      "isMultiZone": false,
+      "VolumeActivityRole": "69615105",
+      "activityOrder": 1,
+      "roles": {
+        "PlayMediaActivityRole": "69615105",
+        "VolumeActivityRole": "69615105"
+      },
+      "label": "Listen to Records",
+      "imageKey": "Activity/311D40B5-6CF9-4DA2-8820-E17012B852A1.png",
+      "type": "VirtualCdMulti"
+    },
+    {
+      "type": "PowerOff",
+      "isAVActivity": false,
+      "sequences": [],
+      "id": "-1",
+      "activityTypeDisplayName": "Default",
+      "controlGroup": [],
+      "suggestedDisplay": "Default",
+      "roles": [],
+      "enterActions": [],
+      "fixit": {
+        "69615105": {
+          "id": "69615105",
+          "isRelativePower": true,
+          "isRelativeInput": true,
+          "Power": "Off"
+        },
+        "69617402": {
+          "id": "69617402",
+          "isRelativePower": true,
+          "Power": "Off"
+        }
+      },
+      "rules": [],
+      "icon": "Default",
+      "label": "PowerOff"
+    },
+    {
+      "rules": [],
+      "sequences": [],
+      "isTuningDefault": false,
+      "activityTypeDisplayName": "Default",
+      "enterActions": [],
+      "fixit": {
+        "69615105": {
+          "id": "69615105",
+          "isRelativePower": true,
+          "isRelativeInput": true,
+          "Power": "On"
+        },
+        "69617402": {
+          "id": "69617402",
+          "isRelativePower": true,
+          "Power": "Off"
+        }
+      },
+      "baseImageUri": "https://rcbu-test-ssl-amr.s3.amazonaws.com/",
+      "zones": null,
+      "type": "VirtualCdMulti",
+      "isAVActivity": true,
+      "id": "44505825",
+      "controlGroup": [
+        {
+          "name": "NumericBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"0\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number0",
+              "label": "0"
+            },
+            {
+              "action": "{\"command\":\"1\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number1",
+              "label": "1"
+            },
+            {
+              "action": "{\"command\":\"2\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number2",
+              "label": "2"
+            },
+            {
+              "action": "{\"command\":\"3\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number3",
+              "label": "3"
+            },
+            {
+              "action": "{\"command\":\"4\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number4",
+              "label": "4"
+            },
+            {
+              "action": "{\"command\":\"5\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number5",
+              "label": "5"
+            },
+            {
+              "action": "{\"command\":\"6\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number6",
+              "label": "6"
+            },
+            {
+              "action": "{\"command\":\"7\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number7",
+              "label": "7"
+            },
+            {
+              "action": "{\"command\":\"8\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number8",
+              "label": "8"
+            },
+            {
+              "action": "{\"command\":\"9\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Number9",
+              "label": "9"
+            },
+            {
+              "action": "{\"command\":\"Clear\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Clear",
+              "label": "Clear"
+            }
+          ]
+        },
+        {
+          "name": "Volume",
+          "function": [
+            {
+              "action": "{\"command\":\"Mute\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Mute",
+              "label": "Mute"
+            },
+            {
+              "action": "{\"command\":\"VolumeDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "VolumeDown",
+              "label": "Volume Down"
+            },
+            {
+              "action": "{\"command\":\"VolumeUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "VolumeUp",
+              "label": "Volume Up"
+            }
+          ]
+        },
+        {
+          "name": "NavigationBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"DirectionDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionDown",
+              "label": "Direction Down"
+            },
+            {
+              "action": "{\"command\":\"DirectionLeft\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionLeft",
+              "label": "Direction Left"
+            },
+            {
+              "action": "{\"command\":\"DirectionRight\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionRight",
+              "label": "Direction Right"
+            },
+            {
+              "action": "{\"command\":\"DirectionUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectionUp",
+              "label": "Direction Up"
+            },
+            {
+              "action": "{\"command\":\"Enter\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Select",
+              "label": "Select"
+            }
+          ]
+        },
+        {
+          "name": "TransportBasic",
+          "function": [
+            {
+              "action": "{\"command\":\"Stop\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Stop",
+              "label": "Stop"
+            },
+            {
+              "action": "{\"command\":\"Play\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Play",
+              "label": "Play"
+            },
+            {
+              "action": "{\"command\":\"Rewind\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Rewind",
+              "label": "Rewind"
+            },
+            {
+              "action": "{\"command\":\"Eject\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Eject",
+              "label": "Eject"
+            },
+            {
+              "action": "{\"command\":\"Pause\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Pause",
+              "label": "Pause"
+            },
+            {
+              "action": "{\"command\":\"FastForward\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "FastForward",
+              "label": "Fast Forward"
+            }
+          ]
+        },
+        {
+          "name": "TransportExtended",
+          "function": [
+            {
+              "action": "{\"command\":\"PreviousTrack\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SkipBackward",
+              "label": "Skip Backward"
+            },
+            {
+              "action": "{\"command\":\"NextTrack\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SkipForward",
+              "label": "Skip Forward"
+            }
+          ]
+        },
+        {
+          "name": "NavigationDVD",
+          "function": [
+            {
+              "action": "{\"command\":\"Return\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Return",
+              "label": "Return"
+            },
+            {
+              "action": "{\"command\":\"Menu\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Menu",
+              "label": "Menu"
+            }
+          ]
+        },
+        {
+          "name": "GameType3",
+          "function": [
+            {
+              "action": "{\"command\":\"Enter\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "SelectGame",
+              "label": "Select"
+            }
+          ]
+        },
+        {
+          "name": "RadioTuner",
+          "function": [
+            {
+              "action": "{\"command\":\"PresetPrev\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "PrevPreset",
+              "label": "Prev Preset"
+            },
+            {
+              "action": "{\"command\":\"TuneDown\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "ScanDown",
+              "label": "Scan Down"
+            },
+            {
+              "action": "{\"command\":\"TuneUp\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "ScanUp",
+              "label": "Scan Up"
+            },
+            {
+              "action": "{\"command\":\"PresetNext\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "NextPreset",
+              "label": "Next Preset"
+            },
+            {
+              "action": "{\"command\":\"DirectTune\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "DirectTune",
+              "label": "Direct Tune"
+            }
+          ]
+        },
+        {
+          "name": "NavigationExtended",
+          "function": [
+            {
+              "action": "{\"command\":\"Info\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Info",
+              "label": "Info"
+            }
+          ]
+        },
+        {
+          "name": "PlayMode",
+          "function": [
+            {
+              "action": "{\"command\":\"Shuffle\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Shuffle",
+              "label": "Shuffle"
+            }
+          ]
+        },
+        {
+          "name": "NavigationMusic",
+          "function": [
+            {
+              "action": "{\"command\":\"NowPlaying\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "NowPlaying",
+              "label": "NowPlaying"
+            }
+          ]
+        },
+        {
+          "name": "Setup",
+          "function": [
+            {
+              "action": "{\"command\":\"Sleep\",\"type\":\"IRCommand\",\"deviceId\":\"69615105\"}",
+              "name": "Sleep",
+              "label": "Sleep"
+            }
+          ]
+        }
+      ],
+      "icon": "userdata: 0x4454c8",
+      "activityOrder": 0,
+      "isMultiZone": false,
+      "roles": {
+        "PlayMediaActivityRole": "69615105",
+        "VolumeActivityRole": "69615105"
+      },
+      "VolumeActivityRole": "69615105",
+      "label": "Listen to the Radio",
+      "suggestedDisplay": "ListenToMusic"
+    },
+    {
+      "rules": [],
+      "sequences": [],
+      "isTuningDefault": false,
+      "activityTypeDisplayName": "Default",
+      "enterActions": [],
+      "fixit": {
+        "69615105": {
+          "id": "69615105",
+          "isRelativePower": true,
+          "isRelativeInput": true,
+          "Power": "Off"
+        },
+        "69617402": {
+          "id": "69617402",
+          "isRelativePower": true,
+          "Power": "On"
+        }
+      },
+      "icon": "userdata: 0x4454c8",
+      "zones": null,
+      "suggestedDisplay": "Custom",
+      "isAVActivity": true,
+      "id": "44508042",
+      "controlGroup": [
+        {
+          "name": "PictureAdjustment",
+          "function": [
+            {
+              "action": "{\"command\":\"Brightness Down\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "BrightnessDown",
+              "label": "Brightness Down"
+            },
+            {
+              "action": "{\"command\":\"Brightness Up\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "BrightnessUp",
+              "label": "Brightness Up"
+            }
+          ]
+        },
+        {
+          "name": "ColoredButtons",
+          "function": [
+            {
+              "action": "{\"command\":\"Green\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Green",
+              "label": "Green"
+            },
+            {
+              "action": "{\"command\":\"Red\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Red",
+              "label": "Red"
+            },
+            {
+              "action": "{\"command\":\"Blue\",\"type\":\"IRCommand\",\"deviceId\":\"69617402\"}",
+              "name": "Blue",
+              "label": "Blue"
+            }
+          ]
+        }
+      ],
+      "baseImageUri": "https://rcbu-test-ssl-amr.s3.amazonaws.com/",
+      "imageKey": "Activity/B25A8282-30CE-4EA3-9F92-3E25474B076B.png",
+      "isMultiZone": false,
+      "roles": {
+        "PassThroughActivityRole": "69617402"
+      },
+      "activityOrder": 2,
+      "label": "Turn on the LED Lights",
+      "type": "VirtualGeneric"
+    }
+  ]
+}
