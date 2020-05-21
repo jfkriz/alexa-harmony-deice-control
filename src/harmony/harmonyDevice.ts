@@ -34,12 +34,20 @@ export class HarmonyDevice {
         });
     }
 
+    private getDevice(): any {
+        return this.config.device.find(d => d.id == this.deviceId);
+    }
+
     public async listCommands(): Promise<Array<any>> {
         return this.ready.then(() => {
-            var device = this.config.device.find(d => d.id == this.deviceId);
+            var device = this.getDevice();
             var commands = [].concat.apply([], [device.controlGroup.map(g => g.function)]).reduce((accum, val) => accum.concat(val), []).map(c => c.name).sort();
             return commands;
         });
+    }
+
+    public async hasCommand(cmd: string): Promise<boolean> {
+        return (await this.listCommands()).includes(cmd);
     }
 
     public async sendCommand(cmd: string): Promise<void> {
