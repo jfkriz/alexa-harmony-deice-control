@@ -10,6 +10,10 @@ describe('HarmonyDevice', () => {
         fixture = new HarmonyDevice(HUB_HOST, HUB_REMOTE_ID, LED_DEVICE_ID);
     });
 
+    afterAll(() => {
+        fixture.disconnect();
+    });
+
     it('should list commands properly', async () => {
         var commands = await fixture.listCommands();
         expect(commands).toBeDefined();
@@ -28,4 +32,19 @@ describe('HarmonyDevice', () => {
         expect(ping).toBeDefined();
         console.log(JSON.stringify(ping));
     });
+
+    it('should have PowerToggle command', async () => {
+        var hasCommand = await fixture.hasCommand('PowerToggle');
+        expect(hasCommand).toBe(true);
+    })
+
+    it('should not have PowerUnToggle command', async () => {
+        var hasCommand = await fixture.hasCommand('PowerUnToggle');
+        expect(hasCommand).toBe(false);
+    })
+
+    // it('should send a command', async () => {
+    //     var cmd = 'PowerToggle';
+    //     await fixture.sendCommand(cmd);
+    // });
 });

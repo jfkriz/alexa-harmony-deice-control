@@ -14,10 +14,10 @@ import {
 import express from 'express';
 import { ExpressAdapter, Verifier } from 'ask-sdk-express-adapter';
 import { IncomingHttpHeaders } from 'http';
+import { DeviceCommandHandler } from './handlers/deviceCommandHandler';
+import { DeviceIdRequestVerifier } from './verifiers/deviceIdRequestVerifier';
 
 require('dotenv').config();
-
-const allowedDeviceIdList = process.env.ALLOWED_DEVICE_ID_LIST.split(',');
 
 const LaunchRequestHandler: RequestHandler = {
     canHandle(handlerInput: HandlerInput): boolean {
@@ -107,17 +107,6 @@ const ErrorHandler: ErrorHandler = {
     },
 };
 
-const DeviceIdRequestVerifier: Verifier = {
-    verify(requestEnvelope: string, headers?: IncomingHttpHeaders): Promise<void | string> {
-        const requestEnvelopeJson : RequestEnvelope = JSON.parse(requestEnvelope);
-        if(!allowedDeviceIdList.includes(requestEnvelopeJson.context.System.device.deviceId)) {
-            throw createAskSdkError(this.constructor.name, 'Device is not allowed to use this skill.');
-        }
-
-        return;
-    }
-}
-
 let skill = SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
@@ -125,23 +114,27 @@ let skill = SkillBuilders.custom()
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler,
+        new DeviceCommandHandler(process.env.HUB_HOST_ADDRESS, process.env.HUB_REMOTE_ID, process.env.DEVICE_ID)
     )
     .addErrorHandlers(ErrorHandler)
     .create();
 
 const app = express();
 const adapter = new ExpressAdapter(skill, false, false, [
-    DeviceIdRequestVerifier
+    new DeviceIdRequestVerifier(process.env.ALLOWED_ALEXA_DEVICE_LIST)
 ]);
+
+process.on('SIGQUIT', closeItUp);
 
 app.post('/', adapter.getRequestHandlers());
 var server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
-
-process.on('SIGQUIT', () => {
+function closeItUp() {
     console.info('SIGTERM signal received.');
     console.log('Closing http server.');
     server.close(() => {
       console.log('Http server closed.');
-    });
-  });
+    });    
+}
+
+
