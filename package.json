@@ -5,8 +5,9 @@
   "main": "dist/app.js",
   "scripts": {
     "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "ci-test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine-ci.json",
     "start": "tsc && node dist/app.js",
-    "compile": "tsc"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
