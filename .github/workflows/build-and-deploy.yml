@@ -28,7 +28,7 @@ jobs:
       - run: npm run ci-test
   
       - name: Build and push Docker images
-        if: startsWith(github.ref, 'refs/heads/master/')
+        if: startsWith(github.ref, 'refs/heads/master')
         uses: docker/build-push-action@v1.1.0
         with:
           # Username used to log in to a Docker registry. If not set then no login will occur
