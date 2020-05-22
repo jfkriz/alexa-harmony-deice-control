@@ -39,5 +39,5 @@ jobs:
           repository: jfkriz3/alexa-harmony-device-control
           # Automatically tags the built image with the git reference as per the readme
           tag_with_ref: true
-          push: ${{ startsWith(github.ref, 'refs/heads/master/') }}
+          push: ${{ startsWith(github.ref, 'refs/heads/master') }}
 
