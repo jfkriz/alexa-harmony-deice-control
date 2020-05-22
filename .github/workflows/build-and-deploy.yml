@@ -25,7 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm i
       - run: npm run build --if-present
-      - run: npm test
+      - run: npm run ci-test
   
       - name: Build and push Docker images
         if: startsWith(github.ref, 'refs/heads/master/')
