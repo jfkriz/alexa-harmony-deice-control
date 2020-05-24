@@ -4,7 +4,7 @@ import { BaseHarmonyDeviceCommandHandler } from './baseHarmonyDeviceCommandHandl
 
 export class ColorHandler extends BaseHarmonyDeviceCommandHandler {
     isHandledIntent(intentName: string): boolean {
-        return intentName === 'DeviceCommandIntent';
+        return intentName === 'ColorIntent';
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
