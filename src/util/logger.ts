@@ -36,7 +36,7 @@ const options = {
                 }
             }),
             format.timestamp({
-                format: tsFormat()
+                format: tsFormat
             }), 
             format.printf((info) => {
                 return `${info.timestamp} ${info.level} ${info.message}`;
