@@ -19,6 +19,7 @@ import { logger, expressLogger, expressErrorLogger } from './util'
 import { harmonyDevice, harmonyHandlers } from './handlers'
 
 const port = process.env.PORT || 3000;
+const verifySignatureAndTimestamp = (process.env.VERIFY_SKILL_SIGNATURE_AND_TIMESTAMP || "true") == "true";
 
 const LaunchRequestHandler: RequestHandler = {
     canHandle(handlerInput: HandlerInput): boolean {
@@ -123,7 +124,7 @@ let skill = SkillBuilders.custom()
     .create();
 
 const app = express();
-const adapter = new ExpressAdapter(skill, false, false, [
+const adapter = new ExpressAdapter(skill, verifySignatureAndTimestamp, verifySignatureAndTimestamp, [
     new DeviceIdRequestVerifier(process.env.ALLOWED_ALEXA_DEVICE_LIST)
 ]);
 app.use(expressLogger);
