@@ -1,12 +1,14 @@
 import { HarmonyHub,  } from 'harmonyhub-api';
+import { logger, Disposable } from '../util'
 
-export class HarmonyDevice {
+export class HarmonyDevice implements Disposable {
     private host: string;
     private remoteId: string;
     private deviceId: string;
     private hub: HarmonyHub;
     private config: any;
     private ready: Promise<any>;
+    private pingInterval: NodeJS.Timeout = null;
 
     constructor(host: string, remoteId: string, deviceId: string) {
         this.host = host;
@@ -19,14 +21,39 @@ export class HarmonyDevice {
 
     private _reconnect(): void {
         try {
+            logger.info('Disconnecting hub, just in case...');
+            if(this.pingInterval) {
+                clearInterval(this.pingInterval);
+                this.pingInterval = null;
+            }
             this.hub.disconnect();
         } catch(e) {
-            // Nothing
+            logger.warn(`Error disconnecting hub - ignoring: ${JSON.stringify(e)}`);
         }
 
         this.ready = new Promise((resolve, reject) => {
+            logger.info(`Connecting to hub at ${this.host}, remote ${this.remoteId}, device ${this.deviceId}`);
             this.hub.connect().then((config) => {
+                logger.info('Connected to hub');
                 this.config = config;
+                this.pingInterval = setInterval(async () => {
+                    logger.debug('Pinging hub');
+                    try {
+                        await this.hub.ping();
+                    } catch(e) {
+                        logger.error(`Error pinging hub: ${JSON.stringify(e)}`);
+                    }
+                }, 30000);
+                this.hub.on('close', (event) => {
+                    logger.info(`Close Event: code=[${event.code}], description=[${event.desc}]`);
+                });
+                this.hub.on('error', (event) => {
+                    logger.error(`Error Event: ${JSON.stringify(event)}`);
+                    if (event.code === "ECONNRESET") {
+                        logger.info("Reconnecting after ECONNRESET error event");
+                        this._reconnect();
+                    }
+                });                
                 resolve(undefined);
             }, (reason) => {
                 reject(reason);
@@ -51,7 +78,7 @@ export class HarmonyDevice {
     }
 
     public async sendCommand(cmd: string): Promise<void> {
-        return this.ready.then(() => {
+        return this.ready.then(async () => {
             this.hub.sendCommand(cmd, this.deviceId, 'press');
         });
     }
@@ -70,10 +97,18 @@ export class HarmonyDevice {
 
     public disconnect(): void {
         this.hub.disconnect();
+        if(this.pingInterval) {
+            clearInterval(this.pingInterval);
+        }
+        this.pingInterval = null;
     }
 
     public async reconnect(): Promise<any> {
         this._reconnect();
         return this.ready;
+    }
+
+    public dispose(): void {
+        this.disconnect();
     }
 }

@@ -43,8 +43,8 @@ describe('HarmonyDevice', () => {
         expect(hasCommand).toBe(false);
     })
 
-    // it('should send a command', async () => {
-    //     var cmd = 'PowerToggle';
-    //     await fixture.sendCommand(cmd);
-    // });
+    it('should send a command', async () => {
+        var cmd = 'PowerToggle';
+        await fixture.sendCommand(cmd);
+    });
 });
