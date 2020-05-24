@@ -1,14 +1,13 @@
 import appRoot from 'app-root-path';
 import { createLogger, transports, format } from 'winston';
 import { logger as expressWinstonLogger, errorLogger as expressWinstonErrorLogger } from 'express-winston';
-import moment from 'moment'
 
 const LOG_FILE_PATH = `${appRoot}/logs/app.log`;
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const MAX_FILES = 5;
 
 const level = process.env.APP_LOG_LEVEL || 'info';
-const tsFormat = () => moment().format('YYYY-MM-DD HH:mm:ss.SSS')
+const tsFormat = 'YYYY-MM-DD HH:mm:ss.SSS';
 
 // define the custom settings for each transport (file, console)
 const options = {
@@ -17,7 +16,7 @@ const options = {
         filename: LOG_FILE_PATH,
         handleExceptions: true,
         format: format.combine(
-            format.timestamp({ format: tsFormat() }),
+            format.timestamp({ format: tsFormat }),
             format.json(),
         ),
         maxsize: MAX_FILE_SIZE,

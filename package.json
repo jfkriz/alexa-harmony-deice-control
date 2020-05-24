@@ -21,7 +21,6 @@
     "express-winston": "^4.0.3",
     "harmonyhub-api": "^1.0.8",
     "helmet": "^3.22.0",
-    "moment": "^2.26.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
