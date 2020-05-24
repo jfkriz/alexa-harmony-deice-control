@@ -17,8 +17,8 @@ export class TimerHoursHandler extends BaseHarmonyDeviceCommandHandler {
                 .getResponse()
         }
 
-        var cmd = `${hours} Hour`;
+        var cmd = `${hours.value} Hour`;
 
-        return await this.sendCommand(cmd, input, `Your lights will go off after ${hours} hour${hours.value == "1" ? "" : "s"}`);
+        return await this.sendCommand(cmd, input, `Your lights will go off after ${hours.value} hour${hours.value == "1" ? "" : "s"}`);
     }
 }

@@ -74,12 +74,19 @@ export class HarmonyDevice implements Disposable {
     }
 
     public async hasCommand(cmd: string): Promise<boolean> {
-        return (await this.listCommands()).includes(cmd);
+        var found = await this.findCommand(cmd);
+        return Promise.resolve(found !== null && found !== undefined);
+    }
+
+    private async findCommand(cmd: string): Promise<string> {
+        var found = (await this.listCommands()).find((c) => c.toLowerCase() == cmd.toLowerCase());
+        return Promise.resolve(found);
     }
 
     public async sendCommand(cmd: string): Promise<void> {
         return this.ready.then(async () => {
-            this.hub.sendCommand(cmd, this.deviceId, 'press');
+            var cmdToSend = await this.findCommand(cmd);
+            this.hub.sendCommand(cmdToSend, this.deviceId, 'press');
         });
     }
 

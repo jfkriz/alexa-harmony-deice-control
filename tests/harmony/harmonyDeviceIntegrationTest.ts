@@ -44,7 +44,7 @@ describe('HarmonyDevice', () => {
     })
 
     it('should send a command', async () => {
-        var cmd = 'PowerToggle';
+        var cmd = 'BrightnessUp';
         await fixture.sendCommand(cmd);
     });
 });
