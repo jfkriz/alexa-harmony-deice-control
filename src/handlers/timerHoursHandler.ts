@@ -2,21 +2,23 @@ import { HandlerInput } from 'ask-sdk-core';
 import { Response, IntentRequest } from 'ask-sdk-model';
 import { BaseHarmonyDeviceCommandHandler } from './baseHarmonyDeviceCommandHandler';
 
-export class DeviceCommandHandler extends BaseHarmonyDeviceCommandHandler {
+export class TimerHoursHandler extends BaseHarmonyDeviceCommandHandler {
     isHandledIntent(intentName: string): boolean {
-        return intentName === 'DeviceCommandIntent';
+        return intentName === 'TimerHoursIntent';
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var cmd = request.intent.slots['CommandName'];
+        var hours = request.intent.slots['TimerHours'];
 
-        if(!cmd || !cmd.value) {
+        if(!hours || !hours.value) {
             return input.responseBuilder
                 .speak('Sorry, I don\'t know what command you want to run.')
                 .withShouldEndSession(true)
                 .getResponse()
         }
 
-        return await this.sendCommand(cmd.value, input);
+        var cmd = `${hours} Hour`;
+
+        return await this.sendCommand(cmd, input, `Your lights will go off after ${hours} hour${hours.value == "1" ? "" : "s"}`);
     }
 }

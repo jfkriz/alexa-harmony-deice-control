@@ -1,23 +1,24 @@
+require('dotenv').config();
+
 import {
     ErrorHandler,
     HandlerInput,
     RequestHandler,
     SkillBuilders,
-    createAskSdkError
 } from 'ask-sdk-core';
 import {
     Response,
     SessionEndedRequest,
-    RequestEnvelope
 } from 'ask-sdk-model';
 
 import express from 'express';
-import { ExpressAdapter, Verifier } from 'ask-sdk-express-adapter';
-import { IncomingHttpHeaders } from 'http';
-import { DeviceCommandHandler } from './handlers/deviceCommandHandler';
+import { ExpressAdapter } from 'ask-sdk-express-adapter';
 import { DeviceIdRequestVerifier } from './verifiers/deviceIdRequestVerifier';
 
-require('dotenv').config();
+import { logger, expressLogger, expressErrorLogger } from './util'
+import { harmonyDevice, harmonyHandlers } from './handlers'
+
+const port = process.env.PORT || 3000;
 
 const LaunchRequestHandler: RequestHandler = {
     canHandle(handlerInput: HandlerInput): boolean {
@@ -107,15 +108,17 @@ const ErrorHandler: ErrorHandler = {
     },
 };
 
+let handlers = [
+    LaunchRequestHandler,
+    HelloWorldIntentHandler,
+    HelpIntentHandler,
+    CancelAndStopIntentHandler,
+    SessionEndedRequestHandler,
+    ...harmonyHandlers
+];
+
 let skill = SkillBuilders.custom()
-    .addRequestHandlers(
-        LaunchRequestHandler,
-        HelloWorldIntentHandler,
-        HelpIntentHandler,
-        CancelAndStopIntentHandler,
-        SessionEndedRequestHandler,
-        new DeviceCommandHandler(process.env.HUB_HOST_ADDRESS, process.env.HUB_REMOTE_ID, process.env.DEVICE_ID)
-    )
+    .addRequestHandlers(...handlers)
     .addErrorHandlers(ErrorHandler)
     .create();
 
@@ -123,18 +126,19 @@ const app = express();
 const adapter = new ExpressAdapter(skill, false, false, [
     new DeviceIdRequestVerifier(process.env.ALLOWED_ALEXA_DEVICE_LIST)
 ]);
+app.use(expressLogger);
+app.use(expressErrorLogger);
 
-process.on('SIGQUIT', closeItUp);
+process.on('SIGINT', closeItUp);
 
 app.post('/', adapter.getRequestHandlers());
-var server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
+var server = app.listen(port, () => logger.info(`Server running on port ${port}`));
 
 function closeItUp() {
-    console.info('SIGTERM signal received.');
-    console.log('Closing http server.');
+    logger.info('SIGINT signal received');
+    logger.info('Closing http server.');
     server.close(() => {
-      console.log('Http server closed.');
-    });    
+      logger.info('Http server closed.');
+    });
+    harmonyDevice.dispose();
 }
-
-
