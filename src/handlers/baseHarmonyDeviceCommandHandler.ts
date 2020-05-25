@@ -1,9 +1,12 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk-core';
 import { Response, IntentRequest } from 'ask-sdk-model';
-import { HarmonyDevice } from '../harmony/harmonyDevice'
+import { HarmonyDevice } from '../harmony/harmonyDevice';
+import { DeviceIdRequestVerifier } from '../verifiers/deviceIdRequestVerifier';
 
 export abstract class BaseHarmonyDeviceCommandHandler implements RequestHandler {
+    public deviceIdRequestVerifier: DeviceIdRequestVerifier;
     constructor(private harmonyDevice: HarmonyDevice) {
+        this.deviceIdRequestVerifier = new DeviceIdRequestVerifier(process.env.ALLOWED_ALEXA_DEVICE_LIST);
     }
 
     canHandle(input: HandlerInput): boolean | Promise<boolean> {
@@ -12,6 +15,15 @@ export abstract class BaseHarmonyDeviceCommandHandler implements RequestHandler 
     }
 
     async handle(input: HandlerInput): Promise<Response> {
+        try {
+            this.deviceIdRequestVerifier.verifyRequest(input.requestEnvelope);
+        } catch(e) {
+            return input.responseBuilder
+                .speak(e.message)
+                .withShouldEndSession(true)
+                .getResponse();
+        }
+
         return this.doHandle(input, input.requestEnvelope.request as IntentRequest);
     }
 

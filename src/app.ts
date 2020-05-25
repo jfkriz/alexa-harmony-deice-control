@@ -124,9 +124,7 @@ let skill = SkillBuilders.custom()
     .create();
 
 const app = express();
-const adapter = new ExpressAdapter(skill, verifySignatureAndTimestamp, verifySignatureAndTimestamp, [
-    new DeviceIdRequestVerifier(process.env.ALLOWED_ALEXA_DEVICE_LIST)
-]);
+const adapter = new ExpressAdapter(skill, verifySignatureAndTimestamp, verifySignatureAndTimestamp);
 app.use(expressLogger);
 app.use(expressErrorLogger);
 
