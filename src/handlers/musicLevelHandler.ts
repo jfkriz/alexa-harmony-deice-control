@@ -19,6 +19,6 @@ export class MusicLevelHandler extends BaseHarmonyDeviceCommandHandler {
 
         var cmd = `Music ${level.value}`;
 
-        return await this.sendCommand(cmd, input, `Your lights are now listening for music at level ${level}.`);
+        return await this.sendCommand(cmd, input, `Your lights are now listening for music at level ${level.value}.`);
     }
 }
