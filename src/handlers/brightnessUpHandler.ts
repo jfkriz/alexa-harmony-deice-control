@@ -8,7 +8,7 @@ export class BrightnessUpHandler extends BaseHarmonyDeviceCommandHandler {
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var cmd = 'BrightnessUp';
+        var cmd = 'Brighter';
 
         return await this.sendCommand(cmd, input, 'Your lights are brighter now.');
     }

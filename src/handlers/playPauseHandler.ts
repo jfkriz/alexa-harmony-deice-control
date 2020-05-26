@@ -2,14 +2,14 @@ import { HandlerInput } from 'ask-sdk-core';
 import { Response, IntentRequest } from 'ask-sdk-model';
 import { BaseHarmonyDeviceCommandHandler } from './baseHarmonyDeviceCommandHandler';
 
-export class BrightnessDownHandler extends BaseHarmonyDeviceCommandHandler {
+export class PlayPauseHandler extends BaseHarmonyDeviceCommandHandler {
     isHandledIntent(intentName: string): boolean {
-        return intentName === 'BrightnessDownIntent';
+        return intentName === 'PlayPauseIntent';
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var cmd = 'Dimmer';
+        var cmd = 'Play/Pause';
 
-        return await this.sendCommand(cmd, input, 'Your lights are dimmer now.');
+        return await this.sendCommand(cmd, input, 'Okay.');
     }
 }
