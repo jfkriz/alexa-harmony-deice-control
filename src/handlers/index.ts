@@ -14,6 +14,7 @@ import { JumpHandler } from './jumpHandler';
 import { AllEffectsHandler } from './allEffectsHandler';
 import { SpeedUpHandler } from './speedUpHandler';
 import { SlowDownHandler } from './slowDownIntent';
+import { FlashHandler } from './flashHandler';
 
 export const harmonyDevice = new HarmonyDevice(process.env.HUB_HOST_ADDRESS, process.env.HUB_REMOTE_ID, process.env.DEVICE_ID);
 
@@ -33,4 +34,5 @@ export const harmonyHandlers = [
     new AllEffectsHandler(harmonyDevice),
     new SpeedUpHandler(harmonyDevice),
     new SlowDownHandler(harmonyDevice),
+    new FlashHandler(harmonyDevice)
 ];

@@ -15,8 +15,9 @@ function main() {
     hub.connect()
         .then((config) => {
             console.log('Connected to the hub');
-            //console.log(JSON.stringify(config, null, '  '));
+            // console.log(JSON.stringify(config, null, '  '));
             var device = config.device.find(d => d.id === LED_DEVICE_ID);
+            console.log(JSON.stringify(device, null, '  '));
             var commands = [].concat.apply([], [device.controlGroup.map(g => g.function)]).reduce((accum, val) => accum.concat(val), []).map(c => c.name).sort();
 
             const rl = readline.createInterface({
