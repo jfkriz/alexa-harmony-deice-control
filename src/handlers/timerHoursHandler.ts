@@ -8,7 +8,7 @@ export class TimerHoursHandler extends BaseHarmonyDeviceCommandHandler {
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var hours = request.intent.slots['TimerHours'];
+        var hours = this.getSlotValue('TimerHours', request);
 
         if(!hours || !hours.value) {
             return input.responseBuilder

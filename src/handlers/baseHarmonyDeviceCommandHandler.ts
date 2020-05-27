@@ -1,5 +1,5 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk-core';
-import { Response, IntentRequest } from 'ask-sdk-model';
+import { Response, IntentRequest, Slot } from 'ask-sdk-model';
 import { HarmonyDevice } from '../harmony/harmonyDevice';
 import { DeviceIdRequestVerifier } from '../verifiers/deviceIdRequestVerifier';
 
@@ -44,5 +44,24 @@ export abstract class BaseHarmonyDeviceCommandHandler implements RequestHandler 
             .speak(successResponseText || 'Okay.')
             .withShouldEndSession(true)
             .getResponse();    
+    }
+
+    getSlotValue(slotName: string, request: IntentRequest): Slot {
+        const slots = request.intent.slots;
+        if(!slots) {
+            return null;
+        }
+
+        const slot = slots[slotName];
+        if(!slot) {
+            return null;
+        }
+
+        if(!slot.resolutions || !slot.resolutions.resolutionsPerAuthority) {
+            return slot;
+        }
+
+        const slotValue = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name || slot.value;
+        return { name: slot.name, value: slotValue, resolutions: slot.resolutions, confirmationStatus: slot.confirmationStatus };
     }
 }

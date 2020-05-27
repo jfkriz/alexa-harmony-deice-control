@@ -8,7 +8,7 @@ export class ColorHandler extends BaseHarmonyDeviceCommandHandler {
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var cmd = request.intent.slots['ColorName'];
+        var cmd = this.getSlotValue('ColorName', request);
 
         if(!cmd || !cmd.value) {
             return input.responseBuilder

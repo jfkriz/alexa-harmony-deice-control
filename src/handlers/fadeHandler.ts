@@ -8,7 +8,7 @@ export class FadeHandler extends BaseHarmonyDeviceCommandHandler {
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var colors = request.intent.slots['WhichColors'];
+        var colors = this.getSlotValue('WhichColors', request);
 
         if(!colors || !colors.value) {
             return input.responseBuilder

@@ -8,7 +8,7 @@ export class MusicLevelHandler extends BaseHarmonyDeviceCommandHandler {
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var level = request.intent.slots['MusicLevel'];
+        var level = this.getSlotValue('MusicLevel', request);
 
         if(!level || !level.value) {
             return input.responseBuilder

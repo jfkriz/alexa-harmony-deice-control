@@ -8,7 +8,7 @@ export class DeviceCommandHandler extends BaseHarmonyDeviceCommandHandler {
     }
 
     async doHandle(input: HandlerInput, request: IntentRequest): Promise<Response> {
-        var cmd = request.intent.slots['CommandName'];
+        var cmd = this.getSlotValue('CommandName', request);
 
         if(!cmd || !cmd.value) {
             return input.responseBuilder
