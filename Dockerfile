@@ -1,7 +1,10 @@
-FROM node:12.16.3-buster
+FROM node:12.16.3-slim
 
 # Create app directory
 WORKDIR /usr/src/app
+
+# I like using less on log files
+# RUN apt-get install less
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -14,6 +17,9 @@ RUN npm install
 
 # Bundle app source
 COPY ./dist .env* ./
+
+# I want dates in logs to show up in my timezone...
+ENV TZ=America/New_York
 
 # Expose port 8080 (should match the app port)
 EXPOSE 3000

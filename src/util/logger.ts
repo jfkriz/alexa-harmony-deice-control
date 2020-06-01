@@ -7,7 +7,7 @@ const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const MAX_FILES = 5;
 
 const level = process.env.APP_LOG_LEVEL || 'info';
-const tsFormat = 'YYYY-MM-DD HH:mm:ss.SSS';
+const tsFormat = 'YYYY-MM-DD HH:mm:ss.SSS Z';
 
 // define the custom settings for each transport (file, console)
 const options = {
