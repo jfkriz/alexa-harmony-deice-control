@@ -42,6 +42,7 @@ export class HarmonyDevice implements Disposable {
                         await this.hub.ping();
                     } catch(e) {
                         logger.error(`Error pinging hub: ${JSON.stringify(e)}`);
+                        this._reconnect();
                     }
                 }, 30000);
                 this.hub.on('close', (event) => {
