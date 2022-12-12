@@ -17,7 +17,7 @@
     "ask-sdk": "^2.8.0",
     "ask-sdk-express-adapter": "^2.1.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-winston": "^4.0.3",
     "harmonyhub-api": "^1.0.8",
     "helmet": "^3.22.0",
